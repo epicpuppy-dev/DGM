@@ -1,8 +1,17 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import { program } from "npm:commander";
+import init from "./cmd/init.ts";
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
+program
+    .name("dgm")
+    .description("CLI for managing datapack-based minigame maps for Minecraft")
+    .version("0.1.0");
+
+program.command("init")
+    .description("test")
+    .action((opts) => {
+        init();
+    });
+
 if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+    program.parse();
 }
