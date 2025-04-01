@@ -1,0 +1,11 @@
+# DGM
+**Datapack Game Manager** - A CLI for managing datapack based minigame maps
+Inspired by [PGM](https://pgm.dev)
+
+## How it Works
+Instead of self-resetting, multi use maps, DGM uses single use maps that are designed to be played once. Through the CLI/Wrapper, the world is reset after each game of the map. This also allows for different maps to be rotated and played. All of the game mechanics are run through a datapack. Each map has a map file that defines how different mechanics work and where they are located in the map's world. During map load, those parameters are used to generate a datapack that implements all of the game logic.
+
+### Advantages
+- More version support - Datapacks are much more lightweight and easier to port between versions, because of this, DGM easily supports more versions than a plugin or mod could.
+- Mod support - Also because of datapacks, mods are inherently supported, DGM maps may also define mods that are required to run the map.
+- Multiple server architectures - Since datapacks are part of vanilla, DGM supports the majority, if not all, server runtimes. This includes vanilla, Forge, Fabric, Paper, Spigot, and more.
