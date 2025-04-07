@@ -3,6 +3,7 @@ scoreboard objectives add respawn dummy
 scoreboard objectives add deaths deathCount
 scoreboard objectives add kills playerKillCount
 scoreboard objectives add health health
+scoreboard objectives add kit_target dummy
 scoreboard objectives add kit dummy
 scoreboard objectives add stat_deaths deathCount
 scoreboard objectives add stat_kills playerKillCount {"text": "Kills", "color": "dark_red"}
@@ -10,12 +11,19 @@ scoreboard objectives add stat_kills playerKillCount {"text": "Kills", "color": 
 scoreboard objectives setdisplay sidebar stat_kills
 scoreboard objectives setdisplay list stat_deaths
 
-scoreboard objectives add kit_assault dummy
-scoreboard objectives add kit_cqc dummy
-scoreboard objectives add kit_smg dummy
-scoreboard objectives add kit_sniper dummy
-scoreboard objectives add kit_medic dummy
-scoreboard objectives add kit_grenade dummy
+scoreboard objectives add kit_assault trigger
+scoreboard objectives add kit_cqc trigger
+scoreboard objectives add kit_smg trigger
+scoreboard objectives add kit_sniper trigger
+scoreboard objectives add kit_medic trigger
+scoreboard objectives add kit_grenade trigger
+
+trigger kit_assault set 0
+trigger kit_cqc set 0
+trigger kit_smg set 0
+trigger kit_sniper set 0
+trigger kit_medic set 0
+trigger kit_grenade set 0
 
 gamerule doImmediateRespawn true
 gamerule naturalRegeneration false
