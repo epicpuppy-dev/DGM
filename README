@@ -8,4 +8,4 @@ Instead of self-resetting, multi use maps, DGM uses single use maps that are des
 ### Advantages
 - More version support - Datapacks are much more lightweight and easier to port between versions, because of this, DGM easily supports more versions than a plugin or mod could.
 - Mod support - Also because of datapacks, mods are inherently supported, DGM maps may also define mods that are required to run the map.
-- Multiple server architectures - Since datapacks are part of vanilla, DGM supports the majority, if not all, server runtimes. This includes vanilla, Forge, Fabric, Paper, Spigot, and more.
+- Multiple server architectures - Since datapacks are part of vanilla, DGM supports the majority, if not all, server environments. This includes vanilla, Forge, Fabric, Paper, Spigot, and more.

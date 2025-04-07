@@ -1,4 +1,4 @@
-import { program } from "npm:commander";
+import { Argument, program } from "npm:commander";
 import init from "./cmd/init.ts";
 
 program
@@ -8,8 +8,10 @@ program
 
 program.command("init")
     .description("test")
-    .action((opts) => {
-        init();
+    .addArgument(new Argument("[environment]", "The environment of the server (vanilla, paper, fabric, [neo]forge)").choices(["vanilla", "paper", "fabric", "neoforge", "forge"]))
+    .argument("[version]", "The Minecraft version of the server")
+    .action((environment, version) => {
+        init(environment, version);
     });
 
 if (import.meta.main) {
