@@ -26,6 +26,7 @@ trigger kit_medic set 0
 trigger kit_grenade set 0
 
 gamerule doImmediateRespawn true
+gamerule doMobSpawning false
 gamerule naturalRegeneration false
 gamerule commandBlockOutput false
 gamerule fallDamage false
@@ -53,3 +54,16 @@ scoreboard players set blue values 0
 scoreboard players set active values 0
 scoreboard players set ticks values 1
 scoreboard players set seconds values 0
+
+# Utility commands
+scoreboard objectives add time_5m trigger
+scoreboard objectives add time_10m trigger
+scoreboard objectives add time_15m trigger
+scoreboard objectives add time_20m trigger
+scoreboard objectives add start_game trigger
+
+trigger time_5m set 1
+trigger time_10m set 1
+trigger time_15m set 1
+trigger time_20m set 1
+trigger start_game set 1

@@ -1,5 +1,6 @@
 import { Argument, program } from "npm:commander";
 import init from "./cmd/init.ts";
+import map from "./cmd/map.ts";
 
 program
     .name("dgm")
@@ -12,6 +13,13 @@ program.command("init")
     .argument("[version]", "The Minecraft version of the server")
     .action((environment, version) => {
         init(environment, version);
+    });
+
+program.command("map")
+    .description("Load a map")
+    .argument("<mapName>", "The name of the map")
+    .action((mapName) => {
+        map(mapName);
     });
 
 if (import.meta.main) {
