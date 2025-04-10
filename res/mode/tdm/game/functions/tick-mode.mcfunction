@@ -1,0 +1,1 @@
+execute if score active values matches 1.. run function game:logic/timer

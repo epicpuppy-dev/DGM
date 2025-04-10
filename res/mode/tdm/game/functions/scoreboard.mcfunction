@@ -1,0 +1,2 @@
+bossbar set game players @a
+bossbar set game name ["",{"text":"Blue ","bold":true,"color":"blue"},{"score":{"name":"blue","objective":"values"},"color":"white"},{"text":" | ","color":"black"},{"text":"Red ","bold":true,"color":"red"},{"score":{"name":"red","objective":"values"},"color":"white"}]

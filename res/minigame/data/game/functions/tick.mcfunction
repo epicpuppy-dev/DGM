@@ -20,15 +20,13 @@ kill @e[type=item,nbt={Item:{id:"tacz:ammo"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:splash_potion"}}]
 
 execute if score active values matches 0 run effect give @a weakness 2 5 true
-execute if score active values matches 1.. run function game:logic/timer
 
 execute positioned $JOIN_BLUE$ unless score active values matches 1 run team join blue @a[distance=..2]
 execute positioned $JOIN_RED$ unless score active values matches 1 run team join red @a[distance=..2]
 
 execute as @a[scores={health=..20}] run effect give @s regeneration 2 1 true
 
-bossbar set game players @a
-bossbar set game name ["",{"text":"Blue ","bold":true,"color":"blue"},{"score":{"name":"blue","objective":"values"},"color":"white"},{"text":" | ","color":"black"},{"text":"Red ","bold":true,"color":"red"},{"score":{"name":"red","objective":"values"},"color":"white"}]
+function game:scoreboard
 
 # Utility commands
 execute unless score active values matches 1 run scoreboard players enable @a time_5m

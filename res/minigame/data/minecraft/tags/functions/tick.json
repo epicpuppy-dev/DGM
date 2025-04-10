@@ -1,5 +1,6 @@
 {
     "values": [
-        "game:tick"
+        "game:tick",
+        "game:tick-mode"
     ]
 }

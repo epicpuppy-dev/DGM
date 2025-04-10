@@ -1,1 +1,0 @@
-execute if score @s kills matches 1.. run scoreboard players add red values 1

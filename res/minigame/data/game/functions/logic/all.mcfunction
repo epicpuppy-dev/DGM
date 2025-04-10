@@ -1,3 +1,6 @@
+execute store result score @s y_level run data get entity @s Pos[1]
+execute if score @s y_level matches ..-128 run damage @s 2048 out_of_world
+
 execute unless score @s kit_target matches 0.. run scoreboard players set @s kit_target 0
 execute if score @s kit_assault matches 1 run scoreboard players set @s kit_target 0
 execute if score @s kit_cqc matches 1 run scoreboard players set @s kit_target 1

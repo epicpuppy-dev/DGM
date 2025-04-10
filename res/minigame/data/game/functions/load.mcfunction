@@ -7,6 +7,7 @@ scoreboard objectives add kit_target dummy
 scoreboard objectives add kit dummy
 scoreboard objectives add stat_deaths deathCount
 scoreboard objectives add stat_kills playerKillCount {"text": "Kills", "color": "dark_red"}
+scoreboard objectives add y_level dummy
 
 scoreboard objectives setdisplay sidebar stat_kills
 scoreboard objectives setdisplay list stat_deaths

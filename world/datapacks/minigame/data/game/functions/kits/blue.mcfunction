@@ -1,0 +1,1 @@
+item replace entity @s armor.head with leather_helmet{Unbreakable:1b,display:{color: 3949738}}
